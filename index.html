@@ -1,179 +1,246 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Alul</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #0f172a;
-            color: #f0e2e2;
-        }
-
-        header {
-            background-color: #020617;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        header h1 {
-            margin: 0;
-            color: #38bdf8;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .profile {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .profile img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #38bdf8;
-        }
-
-        .profile h2 {
-            margin-top: 10px;
-        }
-
-        .section {
-            margin-top: 40px;
-        }
-
-        .section h2 {
-            border-bottom: 2px solid #38bdf8;
-            padding-bottom: 5px;
-            color: #38bdf8;
-        }
-
-        .project {
-            background: #1e293b;
-            padding: 15px;
-            margin-top: 15px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-
-        .project:hover {
-            transform: scale(1.02);
-            background: #0f66df;
-        }
-
-        footer {
-            background-color: #020617;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-            border-top: 1px solid #1e293b;
-        }
-
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* EXPERIENCE */
-        .experience span {
-            display: inline-block;
-            background: #0f66df;
-            color: white;
-            padding: 6px 12px;
-            margin: 5px;
-            border-radius: 20px;
-        }
-    </style>
+    <title>Portofolio Syahrul Ramadhani</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Portfolio Saya</h1>
-    </header>
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navy">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="img/WhatsApp Image 2026-10-28 at 16.15.27.jpeg" alt="Foto Profil" class="rounded-circle profile-img" width="80" height="80" 
+                     data-bs-toggle="modal" data-bs-target="#modalFotoProfil">
+                <span>Portofolio</span>
+            </a>
 
-    <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
+                aria-controls="menuNavbar" aria-expanded="false" aria-label="Buka navigasi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- PROFILE -->
-        <div class="profile">
-            <img src="syahrul.jpeg" alt="Foto Profil">
-            <h2>Syahrul Ramadhani </h2>
-            <p>D0225349</p>
-            <p>Universitas Sulawesi Barat</p>
-            <p>Web Developer Pemula</p>
+            <div class="collapse navbar-collapse" id="menuNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyek">Proyek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        <!-- ABOUT -->
-        <div class="section">
-            <h2>About Me</h2>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1>Halo, saya Syahrul Ramadhani</h1>
             <p>
-                Halo! Nama saya Syahrul Ramadhani, seorang mahasiswa dari Universitas Sulawesi Barat 
-                yang tertarik pada dunia teknologi, programming, dan Web Development. 
-                Saya ingin terus mengembangkan skill saya untuk masa depan.
+                Mahasiswa Informatika yang tertarik pada pengembangan
+                web dan teknologi.
             </p>
-        </div>
 
-        <!-- EXPERIENCE -->
-        <div class="section">
-            <h2>Experience</h2>
-            <div class="experience">
-                <span>Java Programming</span>
-                <span>Web Development</span>
-                <span>OOP Concept</span>
-                <span>VScode</span>
+            <a href="#proyek" class="btn btn-primary">
+                Lihat Proyek
+            </a>
+        </div>
+    </section>
+
+    <!-- Proyek Section -->
+    <section id="proyek" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Proyek Saya</h2>
+
+            <div class="row g-4">
+                <!-- Kartu Proyek 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Portal Akademik</h5>
+                            <p class="card-text">
+                                Website sederhana untuk menampilkan
+                                informasi akademik mahasiswa.
+                            </p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalProyek">
+                                Lihat Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu Proyek 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Aplikasi Kasir</h5>
+                            <p class="card-text">
+                                Aplikasi untuk membantu pencatatan
+                                pesanan dan transaksi.
+                            </p>
+                            <a href="#" class="btn btn-primary">
+                                Lihat Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kartu Proyek 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Phone Locker</h5>
+                            <p class="card-text">
+                                Konsep loker pintar untuk menyimpan
+                                telepon genggam saat kegiatan berlangsung.
+                            </p>
+                            <a href="#" class="btn btn-primary">
+                                Lihat Detail
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- SKILL -->
-        <div class="section">
-            <h2>Skill</h2>
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Hubungi Saya</h2>
 
-            <div class="project">
-                <h3>Web Developer</h3>
-                <p>Bisa membuat web sederhana </p>
-            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
 
-            <div class="project">
-                <h3>Java Programming</h3>
-                <p>Mampu menguasai dasar-dasar dari Bahasa Pemrograman Java.</p>
-            </div>
+                    <form id="formKontak" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama" name="nama"
+                                placeholder="Masukkan nama Anda" required>
+                            <div class="invalid-feedback">
+                                Nama wajib diisi.
+                            </div>
+                        </div>
 
-            <div class="project">
-                <h3>VScode</h3>
-                <p>Mampu untuk mengoperasikan Aplikasi VScode.</p>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="nama@email.com" required>
+                            <div class="invalid-feedback">
+                                Masukkan alamat email yang valid.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="pesan" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="pesan" name="pesan" rows="4"
+                                placeholder="Tulis pesan Anda" required></textarea>
+                            <div class="invalid-feedback">
+                                Pesan wajib diisi.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Kirim Pesan
+                        </button>
+                    </form>
+
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- CONTACT -->
-        <div class="section">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="#">alulcerita05@gmail.com</a></p>
-            <p>Instagram: <a href="#">@arul_952</a></p>
-            <p>
-                <a href="#">Send Message</a> | 
-                <a href="#">View Profile</a>
-            </p>
+    <!-- Footer -->
+    <footer class="bg-navy text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Syahrul Ramadhani. All rights reserved.</p>
         </div>
-
-    </div>
-
-    <footer>
-        <p>© 2026 Portfolio Syahrul Ramadhani</p>
     </footer>
 
+    <!-- Modal Proyek -->
+    <div class="modal fade" id="modalProyek" tabindex="-1" aria-labelledby="judulModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="judulModal">
+                        Portal Akademik
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+
+                <div class="modal-body">
+                    Portal Akademik merupakan website sederhana
+                    untuk menampilkan informasi akademik mahasiswa.
+                    Proyek ini dibuat untuk m1empelajari HTML,
+                    CSS, dan Bootstrap.
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pesan Berhasil -->
+    <div class="modal fade" id="modalPesanBerhasil" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-3">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <span class="text-success">
+                            <i class="bi bi-check-circle-fill" style="font-size: 3rem;"></i>
+                        </span>
+                    </div>
+
+                    <h4 class="mb-2">Berhasil!</h4>
+
+                    <p class="text-secondary">
+                        Form kontak berhasil divalidasi.
+                    </p>
+
+                    <button type="button" id="tombolKonfirmasi" class="btn btn-primary px-4" data-bs-dismiss="modal">
+                        Oke, Mengerti
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Foto Profil Full -->
+    <div class="modal fade" id="modalFotoProfil" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body text-center p-0 position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-2" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                    <img src="WhatsApp Image 2026-10-27 at 20.45.26.jpeg" alt="Foto Profil Full" class="img-fluid rounded-circle shadow modal-profile-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
+
 </html>
